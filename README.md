@@ -1,20 +1,30 @@
 Projet DevSevCloud
+Table des matières
 Installation
-Pour installer les dépendances nécessaires au lancement du projet, exécutez la commande :
+Configuration
+Stack technique
+Installation
+Pour installer les dépendances nécessaires au lancement du projet, exécutez la commande suivante :
 
+bash
+Copy code
 npm install
 Configuration
 Mettre en place une base de données MongoDB
-Pout mettre en place une base de données MongoDB rendez-vous sur le site: MongoDB Atlas for free.
+Pour mettre en place une base de données MongoDB, rendez-vous sur le site MongoDB.
 
-Mettre en place les variables d'environment
-Copier le fichier env.local.example dans le même répertoire et renommer le .env.local (Ce fichier sera ignoré par Git):
+Mettre en place les variables d'environnement
+Copiez le fichier env.local.example dans le même répertoire et renommez-le en .env.local (Ce fichier sera ignoré par Git) :
 
-cp .env.local .env.local
-Définir les variables d'environnement dans le fichier .env.local:
+bash
+Copy code
+cp .env.local.example .env.local
+Définissez les variables d'environnement dans le fichier .env.local :
 
-MONGODB_URI - Votre lien de connexion à votre base de données. Si vous utilisez MongoDB Atlas vous pourrez le trouver en cliquant sur le bouton "Connect" de votre cluster.
-Run Next.js in development mode
-npm run dev
+env
+Copy code
+MONGODB_URI=Votre_lien_de_connexion_à_votre_base_de_données
+Si vous utilisez MongoDB Atlas, vous pouvez trouver le lien de connexion en cliquant sur le bouton "Connect" de votre cluster.
+
 Stack technique
-Ce projet a été réalisé en javascript avec le framework next.js. Il est connecté à une base données MongoDB. Un swagger a été mis en place avec la librairie "swagger-ui".
+Ce projet a été réalisé en JavaScript avec le framework Next.js. Il est connecté à une base de données MongoDB. Un Swagger a été mis en place avec la librairie swagger-ui.
