@@ -1,30 +1,48 @@
-Projet DevSevCloud
-Table des matières
-Installation
-Configuration
-Stack technique
-Installation
-Pour installer les dépendances nécessaires au lancement du projet, exécutez la commande suivante :
+# Projet DevSevCloud
 
-bash
-Copy code
+## Installation
+
+Lors de la récupération du projet : 
+```bash
+cd with-mongodb-app
+```
+Ensuite, on installe tout les packages nécéssaires au bon fonctionnement de l'application :
+```bash
 npm install
-Configuration
-Mettre en place une base de données MongoDB
-Pour mettre en place une base de données MongoDB, rendez-vous sur le site MongoDB.
+```
 
-Mettre en place les variables d'environnement
-Copiez le fichier env.local.example dans le même répertoire et renommez-le en .env.local (Ce fichier sera ignoré par Git) :
+## Configuration
 
-bash
-Copy code
-cp .env.local.example .env.local
-Définissez les variables d'environnement dans le fichier .env.local :
+### Mettre en place une base de données MongoDB
 
-env
-Copy code
-MONGODB_URI=Votre_lien_de_connexion_à_votre_base_de_données
-Si vous utilisez MongoDB Atlas, vous pouvez trouver le lien de connexion en cliquant sur le bouton "Connect" de votre cluster.
+Pout mettre en place une base de données MongoDB rendez-vous sur Mongo DB :
+https://mongodb.com/fr-fr
 
-Stack technique
-Ce projet a été réalisé en JavaScript avec le framework Next.js. Il est connecté à une base de données MongoDB. Un Swagger a été mis en place avec la librairie swagger-ui.
+Il faudra ensuite se connecter et vous créer une base de données.
+
+
+### Mettre en place les variables d'environment
+
+Afin de faire fonctionner le fichier, il faudra dans notre dossier `with-mongodb-app` créer un fichier :
+
+`.env.local` ( Fichier à faire ignorer par GIT )
+
+```bash
+cp .env.local .env.local
+```
+
+Définir les variables d'environnement dans le fichier `.env.local`:
+
+- `MONGODB_URI` - Votre lien de connexion à votre base de données. Si vous utilisez [MongoDB Atlas](https://mongodb.com/atlas) vous pourrez le trouver en cliquant sur le bouton "Connect" de votre cluster.
+
+### Run Next.js in development mode
+
+```bash
+npm run dev
+```
+
+## Stack technique
+
+Ce projet a été réalisé en javascript avec le framework next.js. Il est connecté à une base données MongoDB.
+Un swagger a été mis en place avec la librairie "swagger-ui".
+
